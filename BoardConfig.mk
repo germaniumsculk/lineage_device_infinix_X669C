@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/FULL-64
+DEVICE_PATH := device/infinix/x669c
 
 # A/B
 AB_OTA_UPDATER := true
@@ -42,8 +42,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := FULL-64_defconfig
-TARGET_KERNEL_SOURCE := kernel/infinix/FULL-64
+TARGET_KERNEL_CONFIG := x669c_defconfig
+TARGET_KERNEL_SOURCE := kernel/infinix/x669c
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -94,4 +94,4 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Inherit the proprietary files
-include vendor/infinix/FULL-64/BoardConfigVendor.mk
+include vendor/infinix/x669c/BoardConfigVendor.mk
